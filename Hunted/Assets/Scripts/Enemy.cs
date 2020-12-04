@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
 
 
-    public float DeathDistance = 0.5f;
+    public float DeathDistance = 100f;
     public float DistanceAway;
     public Transform thisObject;
     public Transform target;
@@ -47,13 +47,29 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        if(dist <= DeathDistance)
+        /*if(dist <= DeathDistance)
         {
-            //kill and lose life
-        }
+
+            Debug.Log("kill player");
+            //Application.Quit();
+        }*/
 
 
 
         
+    }
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            Debug.Log("kill player");
+
+            //Application.Quit();
+        }
+
+
     }
 }
