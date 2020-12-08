@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,56 +8,46 @@ public class Enemy : MonoBehaviour
 {
 
 
-    public float DeathDistance = 100f;
-    public float DistanceAway;
-    public Transform thisObject;
-    public Transform target;
+    [SerializeField] private Vector3 target;
     private NavMeshAgent navComponent;
+    private Vector3 startingPosition;
+    public Player Player;
+    public NavMeshAgent NavMeshAgent;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        startingPosition = transform.position;
         navComponent = gameObject.GetComponent<NavMeshAgent>();
 
         
+    }
+
+    public void SetTarget()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+
+    }
+
+
+    public void ResetPosition()
+    {
+        NavMeshAgent.enabled = false;
+        transform.position = startingPosition;
+        NavMeshAgent.enabled = true;
+        target = startingPosition;
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
-        float dist = Vector3.Distance(target.position, transform.position);
-
-        if (target)
-        {
-            navComponent.SetDestination(target.position);
-        }
-        else
-        {
-            if(target == null)
-            {
-                target = gameObject.GetComponent<Transform>();
-            }
-            else
-            {
-                target = GameObject.FindGameObjectWithTag("Player").transform;
-            }
-        }
-
-        /*if(dist <= DeathDistance)
-        {
-
-            Debug.Log("kill player");
-            //Application.Quit();
-        }*/
+        navComponent.SetDestination(target);
 
 
-
-        
     }
 
 
@@ -65,11 +56,12 @@ public class Enemy : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("kill player");
-
-            //Application.Quit();
+            //Debug.Log("kill player");
+            StartCoroutine(Player.Die());
         }
 
 
     }
+
+
 }
