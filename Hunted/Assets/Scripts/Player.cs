@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
     }
 
 
-    public IEnumerator Die()
+    public void Die()
     {
         Debug.Log("You Died");
         
@@ -65,11 +65,11 @@ public class Player : MonoBehaviour
         if (lives > 0)
         {
             Message.text = "You Died";
-            Message.enabled = true;
-            yield return new WaitForSeconds(3f);
-            Message.enabled = false;
+            Message.CrossFadeAlpha(1f, 0f, false);
+            Message.CrossFadeAlpha(0f, 3f, false);
+            //Message.enabled = false;
         }
-        yield return null;
+//        yield return null;
 
     }
 

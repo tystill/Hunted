@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
         if(other.tag == "Player")
         {
             //Debug.Log("kill player");
-            StartCoroutine(Player.Die());
+            Player.Die();
         }
 
 

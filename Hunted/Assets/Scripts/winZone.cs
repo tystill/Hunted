@@ -15,7 +15,7 @@ public class winZone : MonoBehaviour
         if (other.tag == "Player")
         {
 
-            StartCoroutine(GameController.NextLevel());
+            GameController.NextLevel();
         }
 
 

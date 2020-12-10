@@ -23,10 +23,10 @@ public class pickRandom : MonoBehaviour
         int maze3 = Random.Range(0, Mazes.Length);
         int maze4 = Random.Range(0, Mazes.Length);
 
-        MazeInstances[0] = Instantiate(Mazes[maze1], new Vector3(-2, 0, 2), Quaternion.Euler(-90, 0, 0));
-        MazeInstances[1] = Instantiate(Mazes[maze2], new Vector3(6, 0, 2), Quaternion.Euler(-90, 0, 90));
-        MazeInstances[2] = Instantiate(Mazes[maze3], new Vector3(6, 0, -6), Quaternion.Euler(-90, 0, 180));
-        MazeInstances[3] = Instantiate(Mazes[maze4], new Vector3(-2, 0, -6), Quaternion.Euler(-90, 0, 270));
+        MazeInstances[0] = Instantiate(Mazes[maze1], new Vector3(-1, 0, 1), Quaternion.Euler(-90, 0, 0));
+        MazeInstances[1] = Instantiate(Mazes[maze2], new Vector3(5, 0, 1), Quaternion.Euler(-90, 0, 90));
+        MazeInstances[2] = Instantiate(Mazes[maze3], new Vector3(5, 0, -5), Quaternion.Euler(-90, 0, 180));
+        MazeInstances[3] = Instantiate(Mazes[maze4], new Vector3(-1, 0, -5), Quaternion.Euler(-90, 0, 270));
 
 
         

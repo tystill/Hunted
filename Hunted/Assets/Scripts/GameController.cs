@@ -16,16 +16,25 @@ public class GameController : MonoBehaviour
     public Text Lives;
     public Text Level;
 
+    public GameObject Pillar;
+    public GameObject[] Pillars;
+
     private int level = 1;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        foreach(GameObject pillar in Pillars)
+        {
+            Instantiate(pillar);
+        }
+        PlacePillars();
         GenerateLevel();
         playerStartingPosition = Player.transform.position;
-        Message.enabled = false;
-        
+        Message.CrossFadeAlpha(0f, 0f, false);
+
+
     }
 
     // Update is called once per frame
@@ -35,7 +44,7 @@ public class GameController : MonoBehaviour
         Level.text = "Level " + level;
         if(Player.lives < 1)
         {
-            StartCoroutine(ResetLevel());
+            ResetLevel();
         }
 
 
@@ -43,7 +52,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    public IEnumerator NextLevel()
+    public void NextLevel()
     {
         //generate level and increment
         GenerateLevel();
@@ -54,9 +63,8 @@ public class GameController : MonoBehaviour
         //display success
         //Debug.Log("Level Beaten");
         Message.text = "Level Cleared";
-        Message.enabled = true;
-        yield return new WaitForSeconds(3f);
-        Message.enabled = false;
+        Message.CrossFadeAlpha(1f, 0f, false);
+        Message.CrossFadeAlpha(0f, 3f, false);
 
 
 
@@ -64,7 +72,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    IEnumerator ResetLevel()
+    private void ResetLevel()
     {
         //generate level
         GenerateLevel();
@@ -72,9 +80,8 @@ public class GameController : MonoBehaviour
         //display death
         //Debug.Log("Ran Out of Lives");
         Message.text = "Out of Lives";
-        Message.enabled = true;
-        yield return new WaitForSeconds(3f);
-        Message.enabled = false;
+        Message.CrossFadeAlpha(1f, 0f, false);
+        Message.CrossFadeAlpha(0f, 3f, false);
         Player.lives = 3;
 
 
@@ -124,5 +131,28 @@ public class GameController : MonoBehaviour
     }
 
 
+
+    private void PlacePillars()
+    {
+
+
+        for(int i = 1; i < 20; i++)
+        {
+
+            for(int j = 1; j < 20; j++)
+            {
+                //(6f * i + 6, -0.835f, 6f * j + 2) for shiny pillars
+                //(6f * i + 6, -0.3f, 6f * j + 2) for marble pillars
+                //Euler(0, Random.Range(0f, 360f), 0) for random rotation
+
+                Instantiate(Pillar, new Vector3(6f * i + 5, -0.835f, 6f * j + 1), Quaternion.identity);
+                Instantiate(Pillar, new Vector3(-6f * i - 1, -0.835f, 6f * j + 1), Quaternion.identity);
+                Instantiate(Pillar, new Vector3(-6f * i - 1, -0.835f, -6f * j - 5), Quaternion.identity);
+                Instantiate(Pillar, new Vector3(6f * i + 5, -0.835f, -6f * j - 5), Quaternion.identity);
+
+
+            }
+        }
+    }
 
 }
