@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5144895334434539176}
   - component: {fileID: 5144895334438909640}
   m_Layer: 0
-  m_Name: Pillar greek prefab (1)
+  m_Name: Central Pillar 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

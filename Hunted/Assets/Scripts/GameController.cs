@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -15,25 +16,47 @@ public class GameController : MonoBehaviour
     public Text Message;
     public Text Lives;
     public Text Level;
+    public Text PauseLives;
+    public Text PauseLevel;
+    public Text Deaths;
+    public int deaths;
+    public Button BackButton;
+    public Slider Slider;
+    public Text SliderValue;
 
     public GameObject Pillar;
     public GameObject[] Pillars;
 
+    public GameObject PauseMenu;
+    private bool isPaused;
+    public GameObject AudioListener;
+
+    public float MaxStamina = 6f;
     private int level = 1;
+
+    private int charges = 4;
+    private int lightsPosition = 0;
+    private GameObject[] Lights = new GameObject[4];
+    public GameObject MagicLight;
+    private float lightTimer = 0f;
+    private bool flag = false; 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        deaths = 0;
         foreach(GameObject pillar in Pillars)
         {
             Instantiate(pillar);
         }
         PlacePillars();
         GenerateLevel();
+        Surface.BuildNavMesh();
         playerStartingPosition = Player.transform.position;
         Message.CrossFadeAlpha(0f, 0f, false);
-
+        isPaused = false;
 
     }
 
@@ -42,13 +65,70 @@ public class GameController : MonoBehaviour
     {
         Lives.text = "Lives: " + Player.lives;
         Level.text = "Level " + level;
-        if(Player.lives < 1)
+        Deaths.text = "Deaths: " + deaths;
+        SliderValue.text = "Mouse Sensitivity: " + (int)(Slider.value*100);
+        PauseLives.text = Lives.text;
+        PauseLevel.text = Level.text;
+
+
+        if (Player.lives < 1)
         {
             ResetLevel();
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (BackButton)
+            {
+                BackButton.onClick.Invoke();
+            }
+            isPaused = !isPaused;
+        }
+
+        if (isPaused)
+        {
+            ActivatePauseMenu();
+        }
+
+        else
+        {
+            DeactivatePauseMenu();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && lightTimer > 4f && !isPaused)
+        {
+            SpawnLight();
+        }
+        lightTimer += Time.deltaTime;
+
+        if (flag)
+        {
+            Surface.BuildNavMesh();
+            flag = false;
+        }
+    }
 
 
+    private void ActivatePauseMenu()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0;
+        PauseMenu.SetActive(true);
+        AudioListener.SetActive(false);
+    }
+
+    public void DeactivatePauseMenu()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        isPaused = false;
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1;
+        AudioListener.SetActive(true);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 
 
@@ -91,6 +171,8 @@ public class GameController : MonoBehaviour
     {
 
         ResetPosition();
+        Surface.RemoveData();
+
 
         //reset the level if one exists
         if (RandomGenerator.MazeInstances[0])
@@ -102,6 +184,13 @@ public class GameController : MonoBehaviour
             foreach (GameObject door in Doors)
             {
                 door.SetActive(true);
+            }
+        }
+        if (Lights[0])
+        {
+            foreach(GameObject Light in Lights)
+            {
+                Destroy(Light);
             }
         }
 
@@ -116,9 +205,7 @@ public class GameController : MonoBehaviour
             }
         }
         RandomGenerator.GenerateLevel();
-
-        Surface.RemoveData();
-        Surface.BuildNavMesh();
+        flag = true;
 
     }
 
@@ -153,6 +240,22 @@ public class GameController : MonoBehaviour
 
             }
         }
+    }
+
+
+    public void SpawnLight()
+    {
+        lightTimer = 0f;
+        Debug.Log("Spawning Light, lightTimer: " + lightTimer);
+        //Destroy old light if applicable
+        if (Lights[lightsPosition])
+        {
+            Destroy(Lights[lightsPosition]);
+        }
+        Lights[lightsPosition] = Instantiate(MagicLight, Player.transform.position + new Vector3(Player.transform.forward.x, 1.03f, Player.transform.forward.z), Player.transform.rotation);
+        lightsPosition = (lightsPosition + 1) % charges;
+
+
     }
 
 }

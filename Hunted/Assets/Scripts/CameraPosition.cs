@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraPosition : MonoBehaviour
 {
@@ -9,13 +10,8 @@ public class CameraPosition : MonoBehaviour
     public Transform PlayerBody;
 
     private float xRotation = 0f;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+
+    public Slider Slider;
 
     // Update is called once per frame
     void Update()
@@ -29,5 +25,12 @@ public class CameraPosition : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         PlayerBody.Rotate(Vector3.up * mouseX);
 
+        ChangeSensitivity();
+
+    }
+
+    public void ChangeSensitivity()
+    {
+        MouseSensitivity = Slider.value*100;
     }
 }

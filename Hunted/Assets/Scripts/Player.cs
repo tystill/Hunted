@@ -18,11 +18,17 @@ public class Player : MonoBehaviour
     public int lives = 3;
     public Text Message;
 
+    private float stamina;
+
+
+    public GameObject MagicLight;
+    private float lightTimer;
+
 
     private void Start()
     {
-
-
+        stamina = GameController.MaxStamina;
+        lightTimer = 0;
 
     }
 
@@ -30,16 +36,38 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        if (Input.GetKey(KeyCode.Space) && stamina > 0)
         {
-            speed = 6f;
+            if (x != 0 || z != 0)
+            {
+                speed = 6f;
+                stamina -= Time.deltaTime * 2;
+            }
+
         }
         else
         {
             speed = 4f;
+            if (!Input.GetKey(KeyCode.Space))
+            {
+                stamina += Time.deltaTime;
+            }
         }
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        if (x == 0 && z == 0)
+        {
+            stamina += Time.deltaTime;
+        }
+        if (stamina > GameController.MaxStamina)
+        {
+            stamina = GameController.MaxStamina;
+        }
+        //Debug.Log("speed: " + speed + " stamina: " + stamina);
+
+
 
         move = transform.right * x + transform.forward * z;
 
@@ -49,18 +77,22 @@ public class Player : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        
+
+
     }
+
 
 
     public void Die()
     {
-        Debug.Log("You Died");
+        //Debug.Log("You Died");
         
         GameController.ResetPosition();
+        GameController.deaths++;
 
         //decrease lives
         lives--;
+        stamina = GameController.MaxStamina;
         //check if lives are 0 in game controller
         if (lives > 0)
         {

@@ -1,4 +1,8 @@
 Base path: '/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents', plugins path '/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/PlaybackEngines'
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=3174 outsize=1328 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=18731 outsize=8657 ok=1
 
 Quitting shader compiler process
