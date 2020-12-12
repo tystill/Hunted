@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
     private GameObject[] Lights = new GameObject[4];
     public GameObject MagicLight;
     private float lightTimer = 0f;
-    private bool flag = false; 
+    //private bool flag = false; 
 
 
     // Start is called before the first frame update
@@ -52,8 +52,7 @@ public class GameController : MonoBehaviour
             Instantiate(pillar);
         }
         PlacePillars();
-        GenerateLevel();
-        Surface.BuildNavMesh();
+        StartCoroutine(GenerateLevel());
         playerStartingPosition = Player.transform.position;
         Message.CrossFadeAlpha(0f, 0f, false);
         isPaused = false;
@@ -101,11 +100,7 @@ public class GameController : MonoBehaviour
         }
         lightTimer += Time.deltaTime;
 
-        if (flag)
-        {
-            Surface.BuildNavMesh();
-            flag = false;
-        }
+
     }
 
 
@@ -135,7 +130,7 @@ public class GameController : MonoBehaviour
     public void NextLevel()
     {
         //generate level and increment
-        GenerateLevel();
+        StartCoroutine(GenerateLevel());
 
         Player.lives = 3;
         level++;
@@ -155,7 +150,7 @@ public class GameController : MonoBehaviour
     private void ResetLevel()
     {
         //generate level
-        GenerateLevel();
+        StartCoroutine(GenerateLevel());
 
         //display death
         //Debug.Log("Ran Out of Lives");
@@ -167,7 +162,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    private void GenerateLevel()
+    private IEnumerator GenerateLevel()
     {
 
         ResetPosition();
@@ -205,7 +200,8 @@ public class GameController : MonoBehaviour
             }
         }
         RandomGenerator.GenerateLevel();
-        flag = true;
+        yield return new WaitForEndOfFrame();
+        Surface.BuildNavMesh();
 
     }
 
