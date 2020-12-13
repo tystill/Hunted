@@ -33,8 +33,6 @@ ScriptsOnlyBuild:
     - FMODUnity.EventCache
     NavMeshComponents.dll:
     - UnityEngine.AI.NavMeshSurface
-    NavMeshComponentsEditor.dll:
-    - UnityEditor.AI.NavMeshAssetManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -703,7 +701,7 @@ ScriptsOnlyBuild:
     className: ColorPalette
   - hash:
       serializedVersion: 2
-      Hash: e81e6a3ac041ba6350ff05634e58ddde
+      Hash: a4da2f0915d43abf966b7667154824b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player

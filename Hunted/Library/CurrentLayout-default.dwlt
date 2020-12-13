@@ -120,10 +120,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 912
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 678, y: 342}
+  m_MaxSize: {x: 12003, y: 8042}
   vertical: 0
-  controlID: 9511
+  controlID: 3663
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 9512
+  controlID: 3664
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,7 +375,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 42acfdff62acfdff40adfdff46adfdff1eaffdff3eaffdff1cb0fdff22b0fdffe030feff0031feffde31feffe431feff34fbffffb23b000076a80000
+      m_ExpandedIDs: e2befeff02bffeffe0bffeffe6bffeff34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -435,9 +435,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.1000004, y: 136, z: 7.9999995}
+    m_Target: {x: 2, y: 1.1575, z: -2}
     speed: 2
-    m_Value: {x: -5.1000004, y: 136, z: 7.9999995}
+    m_Value: {x: 2, y: 1.1575, z: -2}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -484,13 +484,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.13923626, y: 0.76348054, z: -0.6056797, w: -0.17662759}
+    m_Target: {x: 0.6937711, y: -0.055069547, z: 0.05429321, w: 0.71627134}
     speed: 2
-    m_Value: {x: -0.13921297, y: 0.7633529, z: -0.6055784, w: -0.17659806}
+    m_Value: {x: 0.69365203, y: -0.055060096, z: 0.054283895, w: 0.7161484}
   m_Size:
-    m_Target: 27.926842
+    m_Target: 18.358833
     speed: 2
-    m_Value: 27.926842
+    m_Value: 18.358833
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -604,21 +604,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Prefabs/Maps
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Prefabs/Maps
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/ty/Desktop/ECE 194M work/Hunted/Hunted
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 45}
-    m_SelectedIDs: da410000
-    m_LastClickedID: 16858
-    m_ExpandedIDs: 0000000096400000984000009a4000009c4000009e400000a0400000a2400000a4400000a6400000a8400000aa400000ac400000ae400000b0400000b2400000b440000000ca9a3b
+    scrollPos: {x: 0, y: 77}
+    m_SelectedIDs: 1c420000
+    m_LastClickedID: 16924
+    m_ExpandedIDs: 00000000d6400000d8400000da400000dc400000de400000e0400000e2400000e4400000e6400000e8400000ea400000ec400000ee400000f0400000f2400000f4400000f6400000f840000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,7 +646,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 121.51337}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000096400000984000009a4000009c4000009e400000a0400000a2400000a4400000a6400000a8400000aa400000ac400000ae400000b0400000b2400000b440000000ca9a3b
+    m_ExpandedIDs: 00000000d6400000d8400000da400000dc400000de400000e0400000e2400000e4400000e6400000e8400000ea400000ec400000ee400000f0400000f2400000f4400000f6400000f840000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -671,9 +671,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a23b0000
-    m_LastClickedInstanceID: 15266
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300001c6400005a7b0000665a0000765a000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9218505479991809411}
   m_Layer: 0
   m_Name: Maze 2 v1 3D
-  m_TagString: Untagged
+  m_TagString: Maze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

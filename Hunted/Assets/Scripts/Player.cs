@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     private float speed = 4f;
     private Vector3 move;
+    public bool moving = false;
 
     private float gravity = -9.81f;
     private Vector3 velocity;
@@ -20,15 +21,14 @@ public class Player : MonoBehaviour
 
     private float stamina;
 
-
-    public GameObject MagicLight;
-    private float lightTimer;
+    public Slider Stamina;
 
 
     private void Start()
     {
         stamina = GameController.MaxStamina;
-        lightTimer = 0;
+        Stamina.maxValue = GameController.MaxStamina;
+        
 
     }
 
@@ -57,16 +57,25 @@ public class Player : MonoBehaviour
                 stamina += Time.deltaTime;
             }
         }
+
+
         if (x == 0 && z == 0)
         {
+            moving = false;
             stamina += Time.deltaTime;
         }
+        else
+        {
+            moving = true;
+        }
+
+
         if (stamina > GameController.MaxStamina)
         {
             stamina = GameController.MaxStamina;
         }
         //Debug.Log("speed: " + speed + " stamina: " + stamina);
-
+        Stamina.value = stamina;
 
 
         move = transform.right * x + transform.forward * z;

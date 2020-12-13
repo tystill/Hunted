@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
     private bool isPaused;
     public GameObject AudioListener;
 
-    public float MaxStamina = 6f;
+    public float MaxStamina = 12f;
     private int level = 1;
 
     private int charges = 4;
@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
     private GameObject[] Lights = new GameObject[4];
     public GameObject MagicLight;
     private float lightTimer = 0f;
+    private float holdTimer = 0f;
     //private bool flag = false; 
 
 
@@ -52,8 +53,8 @@ public class GameController : MonoBehaviour
             Instantiate(pillar);
         }
         PlacePillars();
-        StartCoroutine(GenerateLevel());
         playerStartingPosition = Player.transform.position;
+        StartCoroutine(GenerateLevel());
         Message.CrossFadeAlpha(0f, 0f, false);
         isPaused = false;
 
@@ -94,9 +95,18 @@ public class GameController : MonoBehaviour
             DeactivatePauseMenu();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && lightTimer > 4f && !isPaused)
+        if (Input.GetKey(KeyCode.E) && lightTimer > 4f && !isPaused && !Player.moving)
         {
-            SpawnLight();
+
+            holdTimer += Time.deltaTime;
+            if(holdTimer >= 1.5f)
+            {
+                SpawnLight();
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.E) || Player.moving)
+        {
+            holdTimer = 0f;
         }
         lightTimer += Time.deltaTime;
 
@@ -241,15 +251,34 @@ public class GameController : MonoBehaviour
 
     public void SpawnLight()
     {
-        lightTimer = 0f;
-        Debug.Log("Spawning Light, lightTimer: " + lightTimer);
+        //Debug.Log("Spawning Light, lightTimer: " + lightTimer);
         //Destroy old light if applicable
-        if (Lights[lightsPosition])
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
         {
-            Destroy(Lights[lightsPosition]);
+            if (hit.distance <= 5)
+            {
+                //Debug.Log("Hit position: " + hit.transform.position);
+                if (hit.transform.tag == "Maze" || hit.transform.tag == "Pillar")
+                {
+                    if (Lights[lightsPosition])
+                    {
+                        Destroy(Lights[lightsPosition]);
+                    }
+
+                    lightTimer = 0f;
+                    Lights[lightsPosition] = Instantiate(MagicLight, hit.point - 0.05f * Player.transform.forward, Quaternion.identity);
+                    lightsPosition = (lightsPosition + 1) % charges;
+
+                }
+
+            }
+
         }
-        Lights[lightsPosition] = Instantiate(MagicLight, Player.transform.position + new Vector3(Player.transform.forward.x, 1.03f, Player.transform.forward.z), Player.transform.rotation);
-        lightsPosition = (lightsPosition + 1) % charges;
+        //Lights[lightsPosition] = Instantiate(MagicLight, Player.transform.position + new Vector3(Player.transform.forward.x, 1.03f, Player.transform.forward.z), Player.transform.rotation);
+        //lightsPosition = (lightsPosition + 1) % charges;
 
 
     }
