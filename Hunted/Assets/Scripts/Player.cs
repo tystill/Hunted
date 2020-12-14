@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public CharacterController controller;
     public GameController GameController;
+    public Animator PlayerController;
 
     private float speed = 4f;
     private Vector3 move;
@@ -22,6 +23,8 @@ public class Player : MonoBehaviour
     private float stamina;
 
     public Slider Stamina;
+
+    private bool CheatMode = false;
 
 
     private void Start()
@@ -40,7 +43,7 @@ public class Player : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.Space) && stamina > 0)
+        if (Input.GetKey(KeyCode.Space) && stamina > 0 && !CheatMode)
         {
             if (x != 0 || z != 0)
             {
@@ -48,6 +51,10 @@ public class Player : MonoBehaviour
                 stamina -= Time.deltaTime * 2;
             }
 
+        }
+        else if(Input.GetKey(KeyCode.Space) && CheatMode)
+        {
+            speed = 6f;
         }
         else
         {
@@ -86,7 +93,7 @@ public class Player : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-
+        PlayerController.SetBool("Walking", moving);
 
     }
 
@@ -96,12 +103,13 @@ public class Player : MonoBehaviour
     {
         //Debug.Log("You Died");
         
-        GameController.ResetPosition();
+        //GameController.ResetPosition();
         GameController.deaths++;
 
         //decrease lives
         lives--;
         stamina = GameController.MaxStamina;
+        transform.rotation = Quaternion.identity;
         //check if lives are 0 in game controller
         if (lives > 0)
         {
@@ -110,11 +118,13 @@ public class Player : MonoBehaviour
             Message.CrossFadeAlpha(0f, 3f, false);
             //Message.enabled = false;
         }
-//        yield return null;
 
     }
 
-
+    public void SetCheatMode()
+    {
+        CheatMode = !CheatMode;
+    }
 
 
 }

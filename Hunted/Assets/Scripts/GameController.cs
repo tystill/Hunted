@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour
     public NavMeshSurface Surface;
     public GameObject[] Doors = new GameObject[4];
     public Player Player;
-    private Vector3 playerStartingPosition;
+    //public Enemy[] Zombies;
+    public Vector3 playerStartingPosition;
     public Text Message;
     public Text Lives;
     public Text Level;
@@ -57,6 +58,11 @@ public class GameController : MonoBehaviour
         StartCoroutine(GenerateLevel());
         Message.CrossFadeAlpha(0f, 0f, false);
         isPaused = false;
+        /*foreach(Enemy zombie in Zombies)
+        {
+            zombie.navComponent = gameObject.GetComponent<NavMeshAgent>();
+
+        }*/
 
     }
 

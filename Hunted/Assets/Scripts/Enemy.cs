@@ -6,20 +6,19 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-
-
+    public GameController GameController;
+    public Animator Zombie;
     [SerializeField] private Vector3 target;
-    private NavMeshAgent navComponent;
     private Vector3 startingPosition;
     public Player Player;
     public NavMeshAgent NavMeshAgent;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
         startingPosition = transform.position;
-        navComponent = gameObject.GetComponent<NavMeshAgent>();
 
         
     }
@@ -45,21 +44,36 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
-        navComponent.SetDestination(target);
+        NavMeshAgent.SetDestination(target);
 
 
     }
 
 
 
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
+
         if(other.tag == "Player")
         {
-            //Debug.Log("kill player");
-            Player.Die();
-        }
 
+
+            //Debug.Log("kill player");
+            Player.controller.enabled = false;
+            yield return new WaitForSeconds(0.2f);
+            NavMeshAgent.enabled = false;
+            Zombie.SetBool("Attack", true);
+
+            yield return new WaitForSeconds(1f);
+
+            Player.Die();
+            Player.transform.position = GameController.playerStartingPosition;
+            Player.controller.enabled = true;
+            NavMeshAgent.enabled = true;
+
+            Zombie.SetBool("Attack", false);
+
+        }
 
     }
 
