@@ -1148,6 +1148,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2ef8e6599b7f9934e8ff0d64c5325a1f, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1251,6 +1255,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   Player: {fileID: 984285350}
   NavMeshAgent: {fileID: 269445518}
+  Emitter: {fileID: 1176337159}
 --- !u!135 &269445520
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1278,6 +1283,34 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &269445522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269445516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &269445523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+  m_PrefabInstance: {fileID: 269445515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &269445524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1532,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 855d7571c3ca4450ab117af5a5c8b88c, type: 2}
+  - {fileID: 2100000, guid: 9053f48ba9d5041f7bec4c2bbd496c89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1687,6 +1720,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2ef8e6599b7f9934e8ff0d64c5325a1f, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1790,6 +1827,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   Player: {fileID: 984285350}
   NavMeshAgent: {fileID: 418570151}
+  Emitter: {fileID: 1646779964}
 --- !u!135 &418570153
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1817,6 +1855,34 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &418570155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418570149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &418570156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+  m_PrefabInstance: {fileID: 418570148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &418570157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2412,6 +2478,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504443077}
   m_CullTransparentMesh: 0
+--- !u!1 &519013261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519013263}
+  - component: {fileID: 519013262}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &519013262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519013261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &519013263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519013261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797381943}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &572047865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,6 +3782,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &758338980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758338982}
+  - component: {fileID: 758338981}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &758338981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758338980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &758338982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758338980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1983709701}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &770120686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +4162,29 @@ Animator:
   m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
   m_PrefabInstance: {fileID: 1932886488}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &797381937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797381935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &797381938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4005,6 +4202,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   Player: {fileID: 984285350}
   NavMeshAgent: {fileID: 797381939}
+  Emitter: {fileID: 519013261}
 --- !u!195 &797381939
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4077,6 +4275,11 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 80
+--- !u!4 &797381943 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+  m_PrefabInstance: {fileID: 1932886488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &815614324
 GameObject:
   m_ObjectHideFlags: 0
@@ -4485,7 +4688,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 855d7571c3ca4450ab117af5a5c8b88c, type: 2}
+  - {fileID: 2100000, guid: 9053f48ba9d5041f7bec4c2bbd496c89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4718,6 +4921,7 @@ GameObject:
   - component: {fileID: 984285350}
   - component: {fileID: 984285351}
   - component: {fileID: 984285352}
+  - component: {fileID: 984285353}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4816,6 +5020,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &984285353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984285347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Music
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &992064298
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,6 +5787,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158822442}
   m_CullTransparentMesh: 0
+--- !u!1 &1176337159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176337161}
+  - component: {fileID: 1176337160}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1176337160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176337159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1176337161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176337159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 269445523}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190482530
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,7 +5892,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 855d7571c3ca4450ab117af5a5c8b88c, type: 2}
+  - {fileID: 2100000, guid: 9053f48ba9d5041f7bec4c2bbd496c89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7111,7 +7392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 757158233128373002, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 803799316254784344, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7127,7 +7408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121011161581445621, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1375780461095354539, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7183,7 +7464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2193966762700056535, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2438390136467873505, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7239,7 +7520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4015927865308975435, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4136835790407018562, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7255,7 +7536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436183059212487803, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Name
@@ -7267,11 +7548,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4635275852841047606, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4683049904492540737, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4710940672626480558, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7295,7 +7576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5139761948278668691, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5537942978994755776, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7315,7 +7596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5919840380852676749, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5931361788683727348, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7323,7 +7604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6120544034525914399, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6144250464998781669, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7331,11 +7612,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6240894085325587095, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6666629746660635108, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6711833190598148216, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7411,7 +7692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650658897552531052, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8693589203349441919, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7419,7 +7700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901803093505179118, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8999675026347501880, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_Layer
@@ -7432,6 +7713,60 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7389507112651452681, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+--- !u!1 &1646779964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1646779966}
+  - component: {fileID: 1646779965}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1646779965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646779964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1646779966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646779964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 418570156}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1663522504
 GameObject:
   m_ObjectHideFlags: 0
@@ -7723,7 +8058,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 855d7571c3ca4450ab117af5a5c8b88c, type: 2}
+  - {fileID: 2100000, guid: 9053f48ba9d5041f7bec4c2bbd496c89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8337,6 +8672,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2ef8e6599b7f9934e8ff0d64c5325a1f, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -8517,6 +8856,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2ef8e6599b7f9934e8ff0d64c5325a1f, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8620,6 +8963,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   Player: {fileID: 984285350}
   NavMeshAgent: {fileID: 1983709696}
+  Emitter: {fileID: 758338980}
 --- !u!135 &1983709698
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8647,6 +8991,34 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1983709700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983709694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Zombie Sounds/Kill Player
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1983709701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8f7380da49034cd488ddff94b1ac35d1, type: 3}
+  m_PrefabInstance: {fileID: 1983709693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1983709702
 MonoBehaviour:
   m_ObjectHideFlags: 0

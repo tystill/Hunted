@@ -12,14 +12,14 @@ public class Enemy : MonoBehaviour
     private Vector3 startingPosition;
     public Player Player;
     public NavMeshAgent NavMeshAgent;
-    
+    public GameObject Emitter;
 
 
     // Start is called before the first frame update
     void Start()
     {
         startingPosition = transform.position;
-
+        Emitter.gameObject.SetActive(false);
         
     }
 
@@ -63,6 +63,8 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             NavMeshAgent.enabled = false;
             Zombie.SetBool("Attack", true);
+            Emitter.gameObject.SetActive(true);
+
 
             yield return new WaitForSeconds(1f);
 
@@ -72,6 +74,7 @@ public class Enemy : MonoBehaviour
             NavMeshAgent.enabled = true;
 
             Zombie.SetBool("Attack", false);
+            Emitter.gameObject.SetActive(false);
 
         }
 
