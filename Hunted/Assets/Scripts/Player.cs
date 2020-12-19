@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
 
     private bool CheatMode = false;
 
+    public GameObject Walking;
+    public GameObject Running;
+
 
     private void Start()
     {
@@ -94,6 +97,24 @@ public class Player : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         PlayerController.SetBool("Walking", moving);
+        if (moving && !GameController.isPaused)
+        {
+            if(speed == 6f)
+            {
+                Running.SetActive(true);
+                Walking.SetActive(false);
+            }
+            else
+            {
+                Running.SetActive(false);
+                Walking.SetActive(true);
+            }
+        }
+        else
+        {
+            Running.SetActive(false);
+            Walking.SetActive(false);
+        }
 
     }
 

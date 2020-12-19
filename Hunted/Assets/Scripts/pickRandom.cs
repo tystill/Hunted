@@ -11,6 +11,7 @@ public class pickRandom : MonoBehaviour
 
     public GameObject[] Mazes;
     public GameObject[] MazeInstances = new GameObject[4];
+    public GameObject[] MapMaze = new GameObject[4];
 
 
 
@@ -28,7 +29,12 @@ public class pickRandom : MonoBehaviour
         MazeInstances[2] = Instantiate(Mazes[maze3], new Vector3(5, 0, -5), Quaternion.Euler(-90, 0, 180));
         MazeInstances[3] = Instantiate(Mazes[maze4], new Vector3(-1, 0, -5), Quaternion.Euler(-90, 0, 270));
 
+        for (int i = 0; i < 4; i++)
+        {
 
+            MapMaze[i] = MazeInstances[i].transform.GetChild(0).gameObject;
+            MapMaze[i].SetActive(false);
+        }
         
 
     }

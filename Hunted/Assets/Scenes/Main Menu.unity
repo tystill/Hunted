@@ -181,9 +181,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -260,9 +260,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -339,13 +339,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -455,9 +455,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -534,9 +534,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -613,9 +613,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -668,7 +668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -283}
+  m_AnchoredPosition: {x: 0, y: -273}
   m_SizeDelta: {x: 1072, y: 566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261207378
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.6981132, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -692,19 +692,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 140
+    m_Font: {fileID: 12800000, guid: 2fecc91d8e64d461baea3ec0ebf7a42e, type: 3}
+    m_FontSize: 211
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 162
+    m_MaxSize: 211
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hunted
+  m_Text: H u n t e d
 --- !u!222 &261207379
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -795,7 +795,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1311257982}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.33069766
+  m_Size: 0.23570725
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -865,7 +865,7 @@ RectTransform:
   m_GameObject: {fileID: 368448077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.117125, y: 1, z: 1}
   m_Children:
   - {fileID: 1086620607}
   m_Father: {fileID: 2021133103}
@@ -874,7 +874,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00006869488, y: 0.0000024668586}
-  m_SizeDelta: {x: -3.6316528, y: 755.9776}
+  m_SizeDelta: {x: -98.81885, y: 1060.6377}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &368448079
 MonoBehaviour:
@@ -1373,9 +1373,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -1589,7 +1589,7 @@ GameObject:
   - component: {fileID: 831318524}
   - component: {fileID: 831318523}
   m_Layer: 5
-  m_Name: Sprint and lights
+  m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1635,9 +1635,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -1647,12 +1647,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: 'Hold E while standing
+  m_Text: 'Hold  ''E'' while standing
 
     still to place a magic
 
-    light on a nearby
-    wall'
+    light on a
+    nearby wall'
 --- !u!222 &831318524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1714,6 +1714,8 @@ GameObject:
   m_Component:
   - component: {fileID: 939438205}
   - component: {fileID: 939438204}
+  - component: {fileID: 939438206}
+  - component: {fileID: 939438203}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1721,6 +1723,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &939438203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939438202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Music
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 0
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!20 &939438204
 Camera:
   m_ObjectHideFlags: 0
@@ -1778,6 +1803,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &939438206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939438202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &1086620606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,8 +1851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 401.43417, y: -383.9888}
-  m_SizeDelta: {x: 770.86835, y: 743.9776}
+  m_AnchoredPosition: {x: 353.84058, y: -536.31885}
+  m_SizeDelta: {x: 675.68115, y: 1048.6377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086620608
 MonoBehaviour:
@@ -1836,9 +1875,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 16
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -1848,71 +1887,91 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: 'Zombies start at the exits (even if they are closed), so if you remember
-    where they came from
+  m_Text: 'If a zombie gets too close, you will die instantly! Try to avoid them
+    at all costs.
 
-    previously, you know that path is one way to get there.
+
+    If you run out of lives, the level resets entirely. If your
+    lights mapped out the correct path, they will
+
+    no longer be there!
 
 
     Zombies
     only make noises when you are close. Use the volume and direction to tell where
-    they
+    they are
 
-    are coming from in order to avoid them.
+    coming from in order to avoid them.
 
 
     You can''t just dodge
-    the zombie in a hallway because their reach is too big. Instead try to go a
+    zombies in a hallway because their reach is too big. Instead try to go a different
 
-    different
-    way because each maze has multiple correct paths.
-
-
-    You move faster than
-    the zombies even when not sprinting,  so if you make no wrong turns, it
-
-    won''t
-    be able to catch you.
+    way
+    because each maze has multiple correct paths, some small enough to lead the zombie
+    around.
 
 
-    Returning to the middle resets the positions of the
-    zombies, so if you ever can''t find your way to
+    Zombies start at the exits (even if they are closed), so if you
+    remember where they came from
 
-    the end, try returning to
-    the middle.
-
-
-    Use the lights as markers for important intersections so you
-    know how to make your way out of a
-
-    particular maze.
+    previously, you know that path is one way
+    to get there.
 
 
-    Repeatedly going
-    back to the middle and venturing farther into each section of the maze in order
+    You move faster than the zombies even when not sprinting, 
+    so if you make no wrong turns, it
 
-    to
-    place a light at a key intersection is a pretty safe strategy.
-
-
-    Keeping
-    track of small ''loops'' or ''islands'' in the maze is a good idea, because you
-    can get ahead of
-
-    the zombie by leading it around one of them then heading
-    in the direction it came from.
+    won''t be able to catch you.
 
 
-    Standing still (even while placing lights)
-    recharges your sprint faster. If you are at an intersection
+    Returning
+    to the middle resets the positions of the zombies, so if you ever can''t find
+    your way to
 
-    low on stamina
-    and need to decide where to go, try standing still for a little bit of extra
-    stamina once
+    the end, try returning to the middle.
 
-    you decide.
 
-'
+    Use the lights as
+    markers for important intersections so you know how to make your way out of a
+
+    particular
+    maze.
+
+
+    You only have energy for five lights at a time. If you place another,
+    your oldest light will be lost.
+
+
+    If you get to the end of a maze with a
+    closed door, the maze will reveal itself on the minimap! Use
+
+    this to try
+    to back safely.
+
+
+    Repeatedly going back to the middle and venturing farther
+    into each section of the maze in order
+
+    to place a light at a key intersection
+    is a pretty safe strategy.
+
+
+    Keeping track of small ''loops'' or ''islands''
+    in the maze is a good idea, because you can get ahead of
+
+    the zombie by leading
+    it around one of them, then go any direction you want. Try using your lights
+
+    for
+    this purpose!
+
+
+    Standing still (even while placing lights) recharges your
+    sprint faster. If you need to decide where
+
+    to go, try standing still for
+    a little bit of extra stamina once you decide.'
 --- !u!222 &1086620609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2123,7 +2182,7 @@ RectTransform:
   m_Father: {fileID: 1780917367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.66930234}
+  m_AnchorMin: {x: 0, y: 0.7642927}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -2428,8 +2487,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 2fecc91d8e64d461baea3ec0ebf7a42e, type: 3}
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -2868,7 +2927,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -150, y: 24}
-  m_SizeDelta: {x: 300, y: 80}
+  m_SizeDelta: {x: 300, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830346677
 MonoBehaviour:
@@ -2891,9 +2950,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -2903,7 +2962,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: 'W, A, S, D to move
+  m_Text: 'W, A, S, D  to move
 
     Mouse to look around
 
@@ -2974,9 +3033,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -3053,9 +3112,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 20
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -3065,20 +3124,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: 'Escape the maze by avoiding the zombie in each section.
+  m_Text: 'Escape the maze by avoiding the zombie in each section and making it to
+    the outside corner.
 
-    Only one
-    section is open, so if you make it to the end of one section that is closed off,
-    you must make your way back to the middle while avoiding the zombie.
-
-
-    This
-    game is supposed to be hard, so don''t worry if you can''t beat it often. I have
-    included a cheat mode that allows unlimited sprint to make it a bit easier to
-    beat.
+    Only one section is open, so if you make it to the end
+    of one section that is closed off, you must make your way back to the middle
+    while avoiding the zombie.
 
 
-    Here are some tips if you need more help:'
+    This game is supposed to be hard, so don''t
+    worry if you can''t beat it often. I have included a cheat mode that allows unlimited
+    sprint to make it a bit easier to beat.
+
+
+    Here are some tips if you need
+    more help:'
 --- !u!222 &1897221595
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3145,9 +3205,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 02c92da8024ed4c19b7609fa29e7ea9f, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40

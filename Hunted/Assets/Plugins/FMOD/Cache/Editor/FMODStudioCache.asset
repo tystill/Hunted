@@ -34,7 +34,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../Fmod bank/Hunted/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637434990240000000
+  lastModified: 637439241740000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -74,11 +74,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../Fmod bank/Hunted/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637434990240000000
+  lastModified: 637439241740000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 966
+    Value: 1082
   Exists: 1
 --- !u!114 &-6069063359327587045
 MonoBehaviour:
@@ -100,10 +100,76 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -161300741404363330}
+  - {fileID: -5967269949716763}
   MinDistance: 1
   MaxDistance: 80
   Length: 13000
+--- !u!114 &-3388944462645652865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zombie Sounds/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Zombie Sounds/Footsteps
+  guid: 7a6b882395769e428f7a30cc6eb5b726
+  Banks:
+  - {fileID: -8439099062576626221}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 40
+  Length: 15753
+--- !u!114 &-3324508037686016202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Running
+  m_EditorClassIdentifier: 
+  Path: event:/Running
+  guid: 41ba7c4ea9e46a469ceda2f4e889ddac
+  Banks:
+  - {fileID: -8439099062576626221}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1900
+--- !u!114 &-2548814272142438546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/3D Timeline/Kill Player
+  m_EditorClassIdentifier: 
+  Name: Kill Player
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-1795997873446976357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +209,26 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &-5967269949716763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/3D Timeline/Kill Player
+  m_EditorClassIdentifier: 
+  Name: Kill Player
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -164,12 +250,15 @@ MonoBehaviour:
   - {fileID: -6069063359327587045}
   - {fileID: 663153843678911819}
   - {fileID: 398520530605074637}
+  - {fileID: 5267034797677635378}
+  - {fileID: -3324508037686016202}
+  - {fileID: -3388944462645652865}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8439099062576626221}
   StringsBanks:
   - {fileID: -6358344518900546631}
-  stringsBankWriteTime: 637434990240000000
+  stringsBankWriteTime: 637439241740000000
   cacheVersion: 5
 --- !u!114 &329182897323834099
 MonoBehaviour:
@@ -260,6 +349,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2921787430074995931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/3D Timeline/Kill Player
+  m_EditorClassIdentifier: 
+  Name: Kill Player
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3696919817525431307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,3 +389,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5267034797677635378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/Walking
+  guid: 10756cae53ffb34f9033e34999521b0c
+  Banks:
+  - {fileID: -8439099062576626221}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22500
+--- !u!114 &9004159622142372048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/3D Timeline/Kill Player
+  m_EditorClassIdentifier: 
+  Name: Kill Player
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1

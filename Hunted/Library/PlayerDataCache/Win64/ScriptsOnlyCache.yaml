@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - GameController
     - MenuController
     - Player
+    - RevealMaze
     - killZone
     - pickRandom
     - safeZone
@@ -104,49 +105,51 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 12236}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12258}
+      Script: {instanceID: 12296}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12814}
+      Script: {instanceID: 12518}
     - Class: 114
-      Script: {instanceID: 13158}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 13250}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13282}
     - Class: 114
-      Script: {instanceID: 13354}
+      Script: {instanceID: 13290}
     - Class: 114
-      Script: {instanceID: 13490}
+      Script: {instanceID: 13384}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13464}
     - Class: 114
-      Script: {instanceID: 13566}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 13714}
+      Script: {instanceID: 13644}
     - Class: 114
-      Script: {instanceID: 13900}
+      Script: {instanceID: 13694}
     - Class: 114
-      Script: {instanceID: 13946}
+      Script: {instanceID: 13726}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 13888}
     - Class: 114
-      Script: {instanceID: 14434}
+      Script: {instanceID: 14094}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14140}
     - Class: 114
-      Script: {instanceID: 15476}
+      Script: {instanceID: 14642}
     - Class: 114
-      Script: {instanceID: 15510}
+      Script: {instanceID: 14662}
     - Class: 114
-      Script: {instanceID: 15708}
+      Script: {instanceID: 14670}
+    - Class: 114
+      Script: {instanceID: 14690}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -199,55 +202,59 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12260}
+      Script: {instanceID: 12298}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 12704}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 12814}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 12940}
+      Script: {instanceID: 12518}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 12692}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 12782}
     - Class: 114
-      Script: {instanceID: 13458}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 13946}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 16496}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 16498}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 16512}
+      Script: {instanceID: 13200}
     - Class: 114
-      Script: {instanceID: 16516}
+      Script: {instanceID: 13290}
     - Class: 114
-      Script: {instanceID: 16522}
+      Script: {instanceID: 13392}
     - Class: 114
-      Script: {instanceID: 16528}
+      Script: {instanceID: 13464}
     - Class: 114
-      Script: {instanceID: 16556}
+      Script: {instanceID: 13612}
     - Class: 114
-      Script: {instanceID: 16570}
+      Script: {instanceID: 13964}
     - Class: 114
-      Script: {instanceID: 16576}
+      Script: {instanceID: 14140}
     - Class: 114
-      Script: {instanceID: 16580}
+      Script: {instanceID: 14200}
     - Class: 114
-      Script: {instanceID: 16584}
+      Script: {instanceID: 14220}
     - Class: 114
-      Script: {instanceID: 16592}
+      Script: {instanceID: 14296}
+    - Class: 114
+      Script: {instanceID: 14642}
+    - Class: 114
+      Script: {instanceID: 14710}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -303,6 +310,12 @@ ScriptsOnlyBuild:
     className: NavMeshModifier
   - hash:
       serializedVersion: 2
+      Hash: 2cd2711b76257ef04d7a71db672c9d42
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformGroup
+  - hash:
+      serializedVersion: 2
       Hash: c8c672fee8a258266e51b55a210b8083
     assemblyName: NavMeshComponents.dll
     namespaceName: UnityEngine.AI
@@ -333,7 +346,7 @@ ScriptsOnlyBuild:
     className: MotionBlur
   - hash:
       serializedVersion: 2
-      Hash: ebe72f1e374ba8450efdc4332e8842d7
+      Hash: 6a3afb7be13e061c79b73661ab1bb9ff
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: pickRandom
@@ -405,6 +418,12 @@ ScriptsOnlyBuild:
     className: PolyShape
   - hash:
       serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformMobileLow
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -447,6 +466,24 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformAndroid
+  - hash:
+      serializedVersion: 2
+      Hash: a6e3c7eb90cba24ee3ab1cd02ed0046b
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: StudioEventEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: fb9ffa19cc5f6f8e5c4464a77236fffa
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: StudioGlobalParameterTrigger
+  - hash:
+      serializedVersion: 2
       Hash: e82c0521cdfe8cb6a168ef7208a98d4a
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -471,10 +508,22 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
+      Hash: 444398bc4fb783b0b448ac3c979214e1
+    assemblyName: FMODUnityResonance.dll
+    namespaceName: 
+    className: FmodResonanceAudioRoom
+  - hash:
+      serializedVersion: 2
       Hash: ef5c43f921427d03730f6ea4c848f07d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformWebGL
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -495,10 +544,28 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 3b590a1ae070ceedd074388227d77099
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: Settings
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 2ec6667e5c574bcffe26a1c9289b1b0e
+    assemblyName: FMODUnity.dll
+    namespaceName: 
+    className: FMODEventPlayable
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformLinux
   - hash:
       serializedVersion: 2
       Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
@@ -519,6 +586,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 224b75e3196e272b1ab59064edcd8ff3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RevealMaze
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -537,6 +610,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformAppleTV
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -553,6 +632,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: ChromaticAberration
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: FMODUnity.dll
+    namespaceName: 
+    className: FMODEventTrack
   - hash:
       serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
@@ -579,10 +664,16 @@ ScriptsOnlyBuild:
     className: ColliderBehaviour
   - hash:
       serializedVersion: 2
-      Hash: 682200cdc2587fd69e507987c40ebf18
+      Hash: 41cd62c920daa3036d9567c8b4c80caa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
+  - hash:
+      serializedVersion: 2
+      Hash: 78ed600767ee635c93a9c698186c105b
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: StudioListener
   - hash:
       serializedVersion: 2
       Hash: d6fc8d3165070298511ec776ea575626
@@ -603,10 +694,16 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 8671c2841c1fd1d95d9a4aaaf02152dc
+      Hash: 5e0fe8f60e6a0b56098843c7ab11478b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformMobileHigh
   - hash:
       serializedVersion: 2
       Hash: 50c443b12ccc0b475183318b5088bcc5
@@ -645,7 +742,7 @@ ScriptsOnlyBuild:
     className: ColorPalette
   - hash:
       serializedVersion: 2
-      Hash: 6bd5ef247328fe7bf0e7af37b4dddeba
+      Hash: 835c0f528d54d633f9d0e90e1ffc0ad8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -705,6 +802,12 @@ ScriptsOnlyBuild:
     className: Entity
   - hash:
       serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformPlayInEditor
+  - hash:
+      serializedVersion: 2
       Hash: 8d4458b476a9a4dd8df843a849fcfffa
     assemblyName: NavMeshComponents.dll
     namespaceName: UnityEngine.AI
@@ -727,6 +830,36 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: af18424ab4310bab8befde4fcb8b8ca8
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: StudioParameterTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformDefault
+  - hash:
+      serializedVersion: 2
+      Hash: 4680db657a09772d677eb34657f979a8
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: FMODRuntimeManagerOnGUIHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformIOS
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformWindows
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -765,6 +898,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 2eb88fd63b96224d0ecf54a6c47d77e1
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: RuntimeManager
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -801,6 +940,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
+      Hash: 7d11e17b0323c2d01abce64d39203eb6
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: StudioBankLoader
+  - hash:
+      serializedVersion: 2
       Hash: 0ffaf073d4b1fa4e8036cf7ad52ddba7
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -819,6 +964,12 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
+    assemblyName: FMODUnity.dll
+    namespaceName: FMODUnity
+    className: PlatformMac
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -829,147 +980,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a6e3c7eb90cba24ee3ab1cd02ed0046b
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: StudioEventEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: 7d11e17b0323c2d01abce64d39203eb6
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: StudioBankLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 78ed600767ee635c93a9c698186c105b
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: StudioListener
-  - hash:
-      serializedVersion: 2
-      Hash: 2cd2711b76257ef04d7a71db672c9d42
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformMobileLow
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformAndroid
-  - hash:
-      serializedVersion: 2
-      Hash: fb9ffa19cc5f6f8e5c4464a77236fffa
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: StudioGlobalParameterTrigger
-  - hash:
-      serializedVersion: 2
-      Hash: 444398bc4fb783b0b448ac3c979214e1
-    assemblyName: FMODUnityResonance.dll
-    namespaceName: 
-    className: FmodResonanceAudioRoom
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformWebGL
-  - hash:
-      serializedVersion: 2
-      Hash: 3b590a1ae070ceedd074388227d77099
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: Settings
-  - hash:
-      serializedVersion: 2
-      Hash: 2ec6667e5c574bcffe26a1c9289b1b0e
-    assemblyName: FMODUnity.dll
-    namespaceName: 
-    className: FMODEventPlayable
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformLinux
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformAppleTV
-  - hash:
-      serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: FMODUnity.dll
-    namespaceName: 
-    className: FMODEventTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformMobileHigh
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformPlayInEditor
-  - hash:
-      serializedVersion: 2
-      Hash: af18424ab4310bab8befde4fcb8b8ca8
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: StudioParameterTrigger
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformDefault
-  - hash:
-      serializedVersion: 2
-      Hash: 4680db657a09772d677eb34657f979a8
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: FMODRuntimeManagerOnGUIHelper
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformIOS
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformWindows
-  - hash:
-      serializedVersion: 2
-      Hash: 2eb88fd63b96224d0ecf54a6c47d77e1
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: RuntimeManager
-  - hash:
-      serializedVersion: 2
-      Hash: 6d0e6d8b0bc4dc4036c080fa0f5b5ee2
-    assemblyName: FMODUnity.dll
-    namespaceName: FMODUnity
-    className: PlatformMac
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: /Users/ty/Desktop/ECE 194M work/Hunted builds/Hunted Beta Build/Hunted
-    Beta Windows/Hunted.exe
+  playerPath: /Users/ty/Desktop/ECE 194M work/Hunted builds/Hunted gold master/Windows
+    Gold Master/Hunted.exe

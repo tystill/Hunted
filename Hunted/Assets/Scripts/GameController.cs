@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public Text PauseLives;
     public Text PauseLevel;
     public Text Deaths;
+    public Text TotalDeaths;
     public int deaths;
     public Button BackButton;
     public Slider Slider;
@@ -27,20 +28,25 @@ public class GameController : MonoBehaviour
 
     public GameObject Pillar;
     public GameObject[] Pillars;
+    public GameObject MapWall;
 
     public GameObject PauseMenu;
-    private bool isPaused;
+    public bool isPaused;
     public GameObject AudioListener;
 
     public float MaxStamina = 12f;
     private int level = 1;
 
-    private int charges = 4;
+    private int charges = 5;
     private int lightsPosition = 0;
-    private GameObject[] Lights = new GameObject[4];
+    private GameObject[] Lights = new GameObject[5];
     public GameObject MagicLight;
     private float lightTimer = 0f;
     private float holdTimer = 0f;
+
+    public Slider LightSlider;
+
+    public GameObject BeatenWindow;
     //private bool flag = false; 
 
 
@@ -72,9 +78,19 @@ public class GameController : MonoBehaviour
         Lives.text = "Lives: " + Player.lives;
         Level.text = "Level " + level;
         Deaths.text = "Deaths: " + deaths;
-        SliderValue.text = "Mouse Sensitivity: " + (int)(Slider.value*100);
+        TotalDeaths.text = "Total Deaths: " + deaths;
+        SliderValue.text = "" + (int)(Slider.value*100);
         PauseLives.text = Lives.text;
         PauseLevel.text = Level.text;
+        LightSlider.value = holdTimer * 2;
+        if(holdTimer > 0)
+        {
+            LightSlider.gameObject.SetActive(true);
+        }
+        else
+        {
+            LightSlider.gameObject.SetActive(false);
+        }
 
 
         if (Player.lives < 1)
@@ -84,10 +100,8 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (BackButton)
-            {
-                BackButton.onClick.Invoke();
-            }
+            //Debug.Log("Escape Pressed");
+
             isPaused = !isPaused;
         }
 
@@ -104,16 +118,19 @@ public class GameController : MonoBehaviour
         if (Input.GetKey(KeyCode.E) && lightTimer > 4f && !isPaused && !Player.moving)
         {
 
-            holdTimer += Time.deltaTime;
-            if(holdTimer >= 1.5f)
+            if(holdTimer >= 0.5f)
             {
                 SpawnLight();
             }
+            holdTimer += Time.deltaTime;
+
+
         }
-        if (Input.GetKeyUp(KeyCode.E) || Player.moving)
+        if (Input.GetKeyUp(KeyCode.E) || Player.moving || isPaused || lightTimer < 4f)
         {
             holdTimer = 0f;
         }
+
         lightTimer += Time.deltaTime;
 
 
@@ -122,19 +139,22 @@ public class GameController : MonoBehaviour
 
     private void ActivatePauseMenu()
     {
+        //Debug.Log("Pausing");
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         PauseMenu.SetActive(true);
-        AudioListener.SetActive(false);
+
     }
 
     public void DeactivatePauseMenu()
     {
+        BackButton.onClick.Invoke();
+
         Cursor.lockState = CursorLockMode.Locked;
         isPaused = false;
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
-        AudioListener.SetActive(true);
+
     }
 
     public void MainMenu()
@@ -151,11 +171,18 @@ public class GameController : MonoBehaviour
         Player.lives = 3;
         level++;
 
+        if (level == 20)
+        {
+            BeatenWindow.SetActive(true);
+            isPaused = true;
+        }
+
         //display success
         //Debug.Log("Level Beaten");
         Message.text = "Level Cleared";
         Message.CrossFadeAlpha(1f, 0f, false);
         Message.CrossFadeAlpha(0f, 3f, false);
+
 
 
 
@@ -170,7 +197,7 @@ public class GameController : MonoBehaviour
 
         //display death
         //Debug.Log("Ran Out of Lives");
-        Message.text = "Out of Lives";
+        Message.text = "Out  of  Lives";
         Message.CrossFadeAlpha(1f, 0f, false);
         Message.CrossFadeAlpha(0f, 3f, false);
         Player.lives = 3;
@@ -234,11 +261,28 @@ public class GameController : MonoBehaviour
     private void PlacePillars()
     {
 
+        for(int i = 0; i < 20; i++)
+        {
+            Instantiate(MapWall, new Vector3(65.5f, 12.5f, 6 * i + 7), Quaternion.identity);
+            Instantiate(MapWall, new Vector3(6 * i + 11, 12.5f, 61.5f), Quaternion.Euler(0, 90, 0));
+
+            Instantiate(MapWall, new Vector3(65.5f, 12.5f, -6 * i - 11), Quaternion.identity);
+            Instantiate(MapWall, new Vector3(6 * i + 11, 12.5f, -65.5f), Quaternion.Euler(0, 90, 0));
+
+            Instantiate(MapWall, new Vector3(-61.5f, 12.5f, -6 * i - 11), Quaternion.identity);
+            Instantiate(MapWall, new Vector3(-6 * i - 7, 12.5f, -65.5f), Quaternion.Euler(0, 90, 0));
+
+            Instantiate(MapWall, new Vector3(-61.5f, 12.5f, 6 * i + 7), Quaternion.identity);
+            Instantiate(MapWall, new Vector3(-6 * i - 7, 12.5f, 61.5f), Quaternion.Euler(0, 90, 0));
+        }
+
 
         for(int i = 1; i < 20; i++)
         {
 
-            for(int j = 1; j < 20; j++)
+
+
+            for (int j = 1; j < 20; j++)
             {
                 //(6f * i + 6, -0.835f, 6f * j + 2) for shiny pillars
                 //(6f * i + 6, -0.3f, 6f * j + 2) for marble pillars
@@ -275,7 +319,8 @@ public class GameController : MonoBehaviour
                     }
 
                     lightTimer = 0f;
-                    Lights[lightsPosition] = Instantiate(MagicLight, hit.point - 0.05f * Player.transform.forward, Quaternion.identity);
+                    holdTimer = 0f;
+                    Lights[lightsPosition] = Instantiate(MagicLight, hit.point + 0.1f * hit.normal.normalized, Quaternion.identity);
                     lightsPosition = (lightsPosition + 1) % charges;
 
                 }
@@ -288,5 +333,12 @@ public class GameController : MonoBehaviour
 
 
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    
 
 }
